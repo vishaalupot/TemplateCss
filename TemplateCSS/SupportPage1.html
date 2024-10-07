@@ -1,35 +1,41 @@
 <style>
-  .headingImage {
+
+  .support-main{
+    background-color: #191919;
+    height: 100vh;
+  }
+
+  .heading-image {
     width: 40vh;
     height: 20vh;
   }
 
-  .heading {
+  .support-heading {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  .headingText {
+  .support-heading-text {
     color: #d7ae1c;
     font-size: 33px;
     font-weight: 600;
     width: 80%;
     display: flex;
     justify-content: center;
-    /* padding: 10px 0px; */
+    padding: 20px 0px;
     font-family: sans-serif;
   }
 
-  .headingText2 {
+  .support-heading-text2 {
     font-size: 2.35rem;
     color: white;
     font-weight: 300;
     padding: 20px 0;
   }
 
-  .form {
+  .support-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,13 +48,13 @@
     padding: 20px;
   }
 
-  .input-container {
+  .support-input-container {
     position: relative;
     margin: 20px 0px;
     width: 100%;
   }
 
-  .input-field {
+  .support-input-field {
     display: block;
     padding: 10px;
     font-size: 16px;
@@ -60,7 +66,7 @@
     width: 100%;
   }
 
-  .input-label {
+  .support-input-label {
     position: absolute;
     top: 0;
     left: 0;
@@ -70,7 +76,7 @@
     transition: all 0.3s ease;
   }
 
-  .input-highlight {
+  .support-input-highlight {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -80,13 +86,13 @@
     transition: all 0.3s ease;
   }
 
-  .input-field:focus + .input-label {
+  .support-input-field:focus + .support-input-label {
     top: -20px;
     font-size: 12px;
     color: #ffffff;
   }
 
-  .input-field:focus + .input-label + .input-highlight {
+  .support-input-field:focus + .support-input-label + .support-input-highlight {
     width: 100%;
   }
 
@@ -127,14 +133,14 @@
     letter-spacing: 4px;
   }
 
-  .lastPara1 {
+  .support-last-para1 {
     font-size: 18px;
     color: white;
     padding: 5px 0;
     font-weight: 300;
   }
 
-  .lastPara2 {
+  .support-last-para2 {
     font-size: 12px;
     color: white;
     font-weight: 400;
@@ -168,43 +174,43 @@
   }
 </style>
 
-<div class="main" id="help-page">
-  <div class="heading">
+<div class="support-main" id="help-page">
+  <div class="support-heading">
     <!-- <img
          src="https://rockybook.fun/content/img/logo/rb-logo.svg?v=1727915236"
-         className="headingImage" alt="heading" style="width: 300px;"
+         className="heading-image" alt="heading" style="width: 300px;"
         /> -->
-    <div class="headingText">
+    <div class="support-heading-text">
       We're happy to <br />
       assist you 24X7
     </div>
-    <div class="headingText2">Request an instant call back</div>
+    <div class="support-heading-text2">Request an instant call back</div>
   </div>
 
   <div style="display: flex; justify-content: center; align-items: center">
-    <form class="form" id="callbackForm">
-      <div class="input-container">
+    <form class="support-form" id="callbackForm">
+      <div class="support-input-container">
         <input
           placeholder="Enter Your Username"
-          class="input-field"
+          class="support-input-field"
           type="text"
           id="username"
         />
-        <label class="input-label">Enter Your Username</label>
-        <span class="input-highlight"></span>
+        <label class="support-input-label">Enter Your Username</label>
+        <span class="support-input-highlight"></span>
       </div>
       <div class="warningText" id="warning1">Please enter the username</div>
 
-      <div class="input-container">
+      <div class="support-input-container">
         <input
           placeholder="Enter Your Phone Number"
-          class="input-field"
+          class="support-input-field"
           type="tel"
           id="phoneNumber"
           maxlength="10"
         />
-        <label class="input-label">Enter Your Phone Number</label>
-        <span class="input-highlight"></span>
+        <label class="support-input-label">Enter Your Phone Number</label>
+        <span class="support-input-highlight"></span>
       </div>
       <div class="warningText" id="warning2">Please enter the phone number</div>
 
@@ -238,19 +244,19 @@
       <div class="line"></div>
     </div>
 
-    <div class="lastPara1">Call on Our Toll Free Number</div>
-    <div class="headingText">9876543210</div>
-    <div class="lastPara2">From 12:00 PM to 6:00 PM</div>
+    <div class="support-last-para1">Call on Our Toll Free Number</div>
+    <div class="support-heading-text">9876543210</div>
+    <div class="support-last-para2">From 12:00 PM to 6:00 PM</div>
   </div>
 </div>
 
-<div class="main" id="help-page-loader">
-  <div class="heading">
+<div class="support-main" id="help-page-loader">
+  <div class="support-heading">
     <!-- <img 
           src="https://rockybook.fun/content/img/logo/rb-logo.svg?v=1727915236"
-          className="headingImage" alt="heading" style="width: 300px; padding: 50px 0px;"
+          className="heading-image" alt="heading" style="width: 300px; padding: 50px 0px;"
           /> -->
-    <div class="headingText" style="padding-top: 50px !important">
+    <div class="support-heading-text" style="padding-top: 50px !important">
       We’ll call you Soon
     </div>
   </div>
@@ -286,9 +292,9 @@
       <div class="line"></div>
     </div>
 
-    <div class="lastPara1">Call on Our Toll Free Number</div>
-    <div class="headingText">9876543210</div>
-    <div class="lastPara2">From 12:00 PM to 6:00 PM</div>
+    <div class="support-last-para1">Call on Our Toll Free Number</div>
+    <div class="support-heading-text">9876543210</div>
+    <div class="support-last-para2">From 12:00 PM to 6:00 PM</div>
   </div>
 </div>
 
