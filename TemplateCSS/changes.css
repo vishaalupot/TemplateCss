@@ -1,0 +1,48 @@
+/* Changes */
+
+.header-balance-button {
+/* flex: 0.84; */
+}
+
+.Container__Item div:has(.header-chat-icon) {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin: 0px 10px;
+}
+
+/* 10/10/2024 Changes */
+
+.header-balance-button .Menu--user{
+    top: 72% !important;
+      display:none;
+  position: absolute;
+}
+
+.header-balance-button div:first-child{
+        /* padding: 0 5px 0 0; */
+}
+
+.header-balance-button #menu_balance_wrapper{
+    border-radius: 0px !important;
+}
+
+/* Latest */
+
+.header-balance-button{
+    flex: 0.84 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .header-mobile-update .logo-mobile img {
+        width: 137px;
+    }
+}
+
+
+.Container__Item div:has(.header-chat-icon) {
+    /* display: flex;
+    flex: 1;
+    justify-content: flex-end; */
+    margin: 0px 2px;
+}
