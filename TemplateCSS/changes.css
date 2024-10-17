@@ -46,3 +46,123 @@
     justify-content: flex-end; */
     margin: 0px 2px;
 }
+
+/* 
+Latest */
+
+.Container--full:not(.mobile .Container--full , .header-left-panel) {
+    padding: 0 20px !important;
+}
+
+<div class="Container__Item">
+                                <div class="">
+
+
+        <div class="static-info-page"><div class="article-section">
+  <div class="header-nav">
+    <div>
+      <a href="javascript:window.history.back();">
+        <img alt="back-icon" src="https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/0cfa084b-bfda-46cf-628f-ada687d1f100/public">
+      </a>
+      <span>Support</span>
+    </div>
+    <a href="home">
+      <img alt="close-icon" src="/content/img/close-icon.svg?v=1725000492">
+    </a>
+  </div>
+
+  <p class="header">Need assistance? Get in touch with us via</p>
+
+  <div class="chat-channel-container">
+    <div class="chat-channel">
+      <div class="chat-channel-icon">
+        <img alt="whats-app" src="https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/2e11fcf3-a9d6-48bd-1c0d-6f113f1e2400/public">
+      </div>
+      <a href="help" target="_blank">
+        <button class="chat-channel-btn action-btn btn btn-load-more">
+          Whatsapp Now
+        </button>
+      </a>
+    </div>
+
+    <div class="chat-channel">
+      <div class="chat-channel-icon">
+        <img alt="chat-with-us" src="https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/1cd453e5-4f9c-4593-8784-0fa68bb6aa00/public">
+      </div>
+      <button class="chat-channel-btn action-btn btn btn-load-more">Request for Enquiry</button>
+    </div>
+
+    <div class="chat-channel">
+      <div class="chat-channel-icon">
+        <img alt="email" src="https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/54e45178-6ded-42c4-5e5f-7aed8063c300/public">
+      </div>
+      <a href="mailto:rockybookcc@gmail.com" target="_blank">
+        <button class="chat-channel-btn action-btn btn btn-load-more">
+          Email Now
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row">
+                              <div class="col-xs-4">
+                                  <div class="form-group">
+                                      <input type="date" class="form-control" id="SearchStartDate" name="SearchDate">
+                                  </div>
+                              </div>
+                              <div class="col-xs-4">
+                                  <div class="form-group">
+                                      <input type="date" class="form-control" id="SearchEndDate" name="SearchDate">
+                                  </div>
+                              </div>
+                              <div class="col-xs-4">
+                                  <div class="form-group">
+                                      <button class="btn btn-success js-form-search-submit btn-filter">Apply Filter</button>
+                                  </div>
+                              </div>
+  </div>
+
+ #profilePopup .mb-accstatment .col-xs-4:nth-child(1),
+    .col-xs-4:nth-child(2) {
+        background-color: #2c2c2c; /* Light blue background */
+        height: 40px;
+    }
+
+    #profilePopup .mb-accstatment .col-xs-4:nth-child(1){
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    #profilePopup .mb-accstatment .col-xs-4:nth-child(2){
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    
+    #profilePopup .mb-accstatment .col-xs-4:has(.form-group #SearchEndDate):after {
+      content: "-";
+      position: absolute;
+      top: 10px;
+      right: 96%;
+      color: white;
+      font-weight: 500;
+  }
