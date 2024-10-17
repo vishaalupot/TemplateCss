@@ -1,8 +1,10 @@
 <style>
 
   .support-main{
-    background-color: #191919;
+    background-color: #000000;
     height: 100vh;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .heading-image {
@@ -26,13 +28,14 @@
     justify-content: center;
     padding: 20px 0px;
     font-family: sans-serif;
+    line-height: 4rem;
   }
 
   .support-heading-text2 {
-    font-size: 2.35rem;
+    font-size: 1.9rem;
     color: white;
     font-weight: 300;
-    padding: 20px 0;
+    padding: 13px 0;
   }
 
   .support-form {
@@ -41,7 +44,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #222222;
-    margin: 15px 40px;
+    margin: 15px 20px;
     border-radius: 12px;
     max-width: 400px;
     width: 100%;
@@ -134,7 +137,7 @@
   }
 
   .support-last-para1 {
-    font-size: 18px;
+    font-size: 1.9rem;
     color: white;
     padding: 5px 0;
     font-weight: 300;
@@ -245,7 +248,7 @@
     </div>
 
     <div class="support-last-para1">Call on Our Toll Free Number</div>
-    <div class="support-heading-text">9876543210</div>
+    <div class="support-heading-text" style="padding:0px;">9876543210</div>
     <div class="support-last-para2">From 12:00 PM to 6:00 PM</div>
   </div>
 </div>
@@ -293,7 +296,7 @@
     </div>
 
     <div class="support-last-para1">Call on Our Toll Free Number</div>
-    <div class="support-heading-text">9876543210</div>
+    <div class="support-heading-text" style="padding:0px;">9876543210</div>
     <div class="support-last-para2">From 12:00 PM to 6:00 PM</div>
   </div>
 </div>
@@ -359,7 +362,7 @@
           })
           .then((data) => {
             document.getElementById("help-page").style.display = "none";
-            document.getElementById("help-page-loader").style.display = "block";
+            document.getElementById("help-page-loader").style.display = "flex";
           })
           .catch((error) => {
             console.error("Error submitting form:", error);
