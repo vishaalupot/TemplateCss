@@ -1,27 +1,40 @@
-  <script>
-    $(document).ready(function() {
-      $('.header-balance-button #totalBonus span:first').replaceWith('<img class='balance-arrow-icon' src='https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/d7b105bd-1e3a-4c88-9e9d-9b0568966f00/public'>')
-      $('.header-balance-button div:first i').replaceWith('<img class='bonus-balance-icon' src='https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/3f0a2cd9-f81a-488d-9d4a-d7ebc11a4f00/public'>')
-      $('.header-balance-button #menu-button-balance span:nth-child(2)').replaceWith('<span>? </span>')
-      $('.header-balance-button #menu-play-balance span:nth-child(2)').replaceWith('<span>?</span>')
-      $('.header-balance-button #menu-button-balance').wrap('<a class='menu-button-balance-link' href='?h=profile&r=deposit'></a>')
-      $('.header-balance-button #menu-play-balance').wrap('<a class='menu-button-balance-link' href='?h=profile&r=deposit'></a>')
-      $('.header-balance-button .Balance--user a.Button--outlined').contents().unwrap();
+<script>
+  $(document).ready(function() {
+    $('.header-balance-button #totalBonus span:first').replaceWith('<img class="balance-arrow-icon" src="https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/d7b105bd-1e3a-4c88-9e9d-9b0568966f00/public">')
+    $('.header-balance-button div:first i').replaceWith('<img class="bonus-balance-icon" src="https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/3f0a2cd9-f81a-488d-9d4a-d7ebc11a4f00/public">')
+    $('.header-balance-button #menu-button-balance span:nth-child(2)').replaceWith('<span>₹ </span>')
+    $('.header-balance-button #menu-play-balance span:nth-child(2)').replaceWith('<span>₹ </span>')
+    $('.header-balance-button #menu-button-balance').wrap('<a class="menu-button-balance-link" href="?h=profile&r=deposit"></a>')
+    $('.header-balance-button #menu-play-balance').wrap('<a class="menu-button-balance-link" href="?h=profile&r=deposit"</a>')
+    $('.header-desktop .Balance--user a.Button--outlined').contents().unwrap();
 
-      $('.header-balance-button .bonus-balance-icon').on('click', function () {
-        $('.header-balance-button div:first').toggleClass('active');
-        $('.header-balance-button .bonus-balance-icon').toggleClass('rotate-180');
-        $('.header-balance-button .Menu--user').toggle()
-      })
+    $('.header-balance-button .bonus-balance-icon').on('click', function () {
+      $('.header-balance-button div:first').toggleClass('active');
+      $('.header-balance-button .bonus-balance-icon').toggleClass('rotate-180');
+      $('.header-balance-button .Menu--user').toggle()
+    })
 
-      // $('.header-balance-button div:first').on('click', function () {
-      //   $('.header-balance-button div:first').toggleClass('active');
-      //   $('.header-balance-button .bonus-balance-icon').toggleClass('rotate-180');
-      //   $('.header-balance-button .Menu--user').toggle()
-      // })
+    // $('.header-balance-button div:first').on('click', function () {
+    //   $('.header-balance-button div:first').toggleClass('active');
+    //   $('.header-balance-button .bonus-balance-icon').toggleClass('rotate-180');
+    //   $('.header-balance-button .Menu--user').toggle()
+    // })
 
-      if(parseInt(BalanceUpdater.PlayerId) > 0){
-        $('.header-mobile-update .Widget--user').hide();
-      }
-    });
-  </script>
+    const totalBonus = document.getElementById("totalBonus");
+    const balanceTotal = document.querySelector(".balance-total");
+    if (totalBonus && balanceTotal) {
+        balanceTotal.appendChild(totalBonus.innerHTML);
+        // document.querySelector(".balance-total").appendChild(totalBonus.innerHTML)
+    }
+
+   $('.balance-total').append($('#totalBonus').innerHTML)
+
+    if(parseInt(BalanceUpdater.PlayerId) > 0){
+      $('.header-mobile-update .Widget--user').hide();
+      $('.header-desktop .Widget--user').hide();
+    }
+  });
+</script>
+
+
+$('.header-left-panel .balance-total').append($('.header-left-panel #totalBonus')[0])

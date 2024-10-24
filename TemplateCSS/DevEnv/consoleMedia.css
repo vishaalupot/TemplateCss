@@ -2649,8 +2649,68 @@ img.accordion-trigger.up {
     text-transform: uppercase;
 }
 
+
 .casino-categories{
     margin-top:5px;
+}
+
+body/*: has(#profilePopup .mb-accstatment)*/ .Container--full.short-cat:has(.header-mobile-update) {
+    z-index: 1501;
+}
+
+body:has(#loginPopup) .mobile-bottom-navbar{
+    z-index: 1501;
+}
+
+.modal-backdrop{
+    z-index: 1080;
+}
+
+.modal-content {
+    top: 50px;
+}
+
+/* Deposit screen fix */
+.trans-logo{
+    display: block !important;
+    width:75px;
+}
+ 
+.trans-proc-time{
+    display: none;
+}
+ 
+.deposit .modal-sub-body-inner > .row:first-child .trans-proc-time{
+    visibility: hidden !important;
+    display:block;
+}
+ 
+.deposit .transaction-row-outlined{
+    width: 100%;
+}
+ 
+.mobile .transaction-row-outlined.column-headers, .mobile .transaction-row-outlined.column-headers-withdrawal{
+    align-items: center;    
+}
+ 
+.transaction-row{
+    padding: 6px 14px;
+}
+ 
+.transaction-row-outlined.column-headers, .transaction-row-outlined.column-headers-withdrawal{
+    padding: 6px 14px;
+}
+ 
+body.mobile #profilePopup .mb-accstatment .profile-sub-nav{
+    gap:5px !important;
+}
+ 
+.deposit .modal-sub-body-inner > .row:first-child .trans-proc-time:after {
+    visibility: visible !important;
+    content: "Options";
+    position: relative;
+    bottom: 9px;
+    right: 10px;
 }
 
 }
@@ -2777,7 +2837,8 @@ img.accordion-trigger.up {
     left: 26rem;
     background: black;
     width: fit-content;
-	flex: 0.84;
+    padding-left: 5px;
+	/* flex: 0.84; */
 }
 
 .header-balance-button div:first-child {
@@ -2920,7 +2981,7 @@ body.mobile #profilePopup .mb-accstatment.modal-dialog{
 
 
 body.mobile #profilePopup .mb-accstatment .modal-content {
-    height: 84%; /* Changed from 97% */
+    height: 100%; /* Changed from 97% */
 }
 
 
@@ -2945,11 +3006,20 @@ body.mobile #profilePopup .mb-accstatment .wallet-table td,
         font-size:10px;
     } 
     body.mobile #profilePopup .profile-sub-nav{
-        gap: 5px;
+        gap: 0px !important;
     }
 
     body.mobile .mb-accstatment .modal-dialog.balancehistory .drawer-body.open{
         padding: 10px 0 !important;
     }
 }
-/* Account-statement-update */
+
+@media screen and (max-width: 768px) {
+    #profilePopup .deposit .modal-content, #profilePopup .withdrawal .modal-content {
+        top: -5px;
+    }
+
+    .modal-content{
+        border: 1px solid var(--background-color-1);
+    }
+}

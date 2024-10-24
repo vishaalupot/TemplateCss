@@ -2493,8 +2493,6 @@ box-shadow: inset 0 0 0 1px var(--primary-color-80);
 border-radius: 16px;
 }
 
-
-
 .Wrapper--Single.view--category.live-casino article.product-card {
 height: 248px;
 }
@@ -2816,8 +2814,6 @@ margin-top: 22px;
 outline: none !important;
 transition: background-color 1s;
 }
-
-
 
 .modal-backdrop.show {
 opacity: .85;
@@ -5582,15 +5578,9 @@ color: var(--red-error-color-1);
 #profilePopup .profile-sub-nav {
 display: flex;
 margin-bottom: 20px;
-flex-wrap: nowrap;
-gap: 10px;
+flex-wrap: wrap;
 position: relative;
 }
-
-#profilePopup .mb-accstatment .profile-sub-nav {
-    flex-wrap: nowrap !important;
-    gap: 10px !important;
-    }
 
 .daterangepicker td.off, .daterangepicker td.off.in-range, 
 .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
@@ -5614,16 +5604,6 @@ border-bottom-left-radius: 12px;
 .profile-sub-nav li:not(.active) a:focus, #profilePopup .profile-sub-nav li.active a {
 border-bottom-color: var(--primary-color-80);
 }
-
-
-#profilePopup .mb-accstatment .profile-sub-nav li:nth-child(1) a:focus,
-.profile-sub-nav li:not(.active) a:focus, #profilePopup .mb-accstatment .profile-sub-nav li.active a {
-    background-color: var(--primary-color) !important;
-    color: black !important;
-}
-
-
-
 
 #profilePopup .profile-sub-nav li.active a {
 color: var(--primary-color);
@@ -5660,14 +5640,9 @@ padding: 18px 24px;
 font-size: 18px;
 font-weight: 700;
 border-bottom: 1px solid transparent;
-border-radius: 22px;
+border-radius: 12px;
 text-align: center;
 }
-
-#profilePopup .mb-accstatment .profile-sub-nav li a {
-    border-radius: 22px !important;
-    }
-
 
 #profilePopup .profile-sub-nav li,
 #profilePopup .no-footer .profile-sub-nav li:nth-child(1),
@@ -5700,9 +5675,6 @@ border-color: #95979d !important;
 background-color: rgba(209,255,13,.02)!important;
 color: #ffffff!important;
 }
-
-
-
     
 [class^='game-container-type-'] {
 width: 100%;
@@ -6689,7 +6661,7 @@ margin-top: -35px;
 
 .modal-content {
 box-shadow: none;
-border: 1px solid var(--primary-color);
+border: 1px solid var(--background-color-1) /*var(--primary-color)*/;
 background-color: #000000;
 overflow: hidden;
 font-size: 1.3rem;
@@ -11400,7 +11372,7 @@ margin-bottom: 16px;
 }
 
 
-
+/* Account-statement-update */
 .mb-accstatment .js-see-details, .mb-accstatment .js-form-search-submit {
     margin-top: 0px !important;
     font-weight: 500;
@@ -11408,7 +11380,7 @@ margin-bottom: 16px;
     color: #808080;
     border-radius: 20px;
     font-size: 10px;
-    padding: 13px !important;
+    /* padding: 13px !important; */
 }
 
 .mb-accstatment .js-see-details, .mb-accstatment .js-form-search-submit .active{
@@ -11421,7 +11393,7 @@ margin-bottom: 16px;
     padding: 0 !important;
     background-color: #1A1A1A;
     border-radius: 12px;
-    padding-top: 5px !important;
+    padding: 15px 5px !important;
     }
 
 .mb-accstatment .modal-content {
@@ -11459,41 +11431,134 @@ background-color: #1A1A1A !important;
 
     }
 
-    .responsible-gambling .select,#profilePopup .mb-accstatment .modal-sub-body form .form-group .form-control {
-        background-color: #2c2c2c!important;
-        padding: 10px !important;
-        color: #808080 !important;
-        border: none !important;
-        }
-    
-        #profilePopup .mb-accstatment .profile-sub-nav li,
-        #profilePopup .mb-accstatment .no-footer .profile-sub-nav li:nth-child(1),
-        #profilePopup .mb-accstatment .no-footer .profile-sub-nav li:nth-child(2) {
-        background-color:#ffffff00;
-        display: block;
-        }
+.responsible-gambling .select,#profilePopup .mb-accstatment .modal-sub-body form .form-group .form-control {
+    background-color: #2c2c2c!important;
+    /* padding: 10px !important; */
+    color: #808080 !important;
+    border: none !important;
+    min-height: 30px;
+}
 
-        #profilePopup .mb-accstatment .col-xs-4:nth-child(1),
-        .col-xs-4:nth-child(2) {
-            background-color: #2c2c2c; /* Light blue background */
-            height: 40px;
-        }
-    
-        #profilePopup .mb-accstatment .col-xs-4:nth-child(1){
-          border-top-left-radius: 20px;
-          border-bottom-left-radius: 20px;
-        }
-    
-        #profilePopup .mb-accstatment .col-xs-4:nth-child(2){
-          border-top-right-radius: 20px;
-          border-bottom-right-radius: 20px;
-        }
-        
-        #profilePopup .mb-accstatment .col-xs-4:has(.form-group #SearchEndDate):after {
-          content: "-";
-          position: absolute;
-          top: 10px;
-          right: 96%;
-          color: #808080 !important;
-          font-weight: 500;
-      }
+#profilePopup .mb-accstatment .profile-sub-nav li,
+#profilePopup .mb-accstatment .no-footer .profile-sub-nav li:nth-child(1),
+#profilePopup .mb-accstatment .no-footer .profile-sub-nav li:nth-child(2) {
+    background-color:#ffffff00;
+    display: block;
+}
+
+#profilePopup .mb-accstatment .col-xs-4:nth-child(1),
+.col-xs-4:nth-child(2) {
+    background-color: #2c2c2c; /* Light blue background */
+    /* height: 40px; */
+}
+
+#profilePopup .mb-accstatment .col-xs-4:nth-child(1){
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#profilePopup .mb-accstatment .col-xs-4:nth-child(2){
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#profilePopup .mb-accstatment .col-xs-4:has(.form-group #SearchEndDate):after {
+    content: "-";
+    position: absolute;
+    top: 10px;
+    right: 96%;
+    color: #808080 !important;
+    font-weight: 500;
+}
+
+      
+#profilePopup .mb-accstatment .profile-sub-nav li a {
+    border-radius: 22px !important;
+ }
+
+
+ #profilePopup .mb-accstatment .profile-sub-nav {
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+ }
+
+ 
+
+#profilePopup .mb-accstatment .profile-sub-nav li:nth-child(1) a:focus,
+.profile-sub-nav li:not(.active) a:focus, #profilePopup .mb-accstatment .profile-sub-nav li.active a {
+    background-color: var(--primary-color) !important;
+    color: black !important;
+}
+
+#profilePopup .mb-accstatment .drawer-body .form-control {
+    height: auto !important;
+}
+
+#profilePopup .mb-accstatment #searchform {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mb-accstatment .form-group {
+    margin-bottom: 0 !important;
+}
+
+.mb-accstatment .form-group input{
+    font-size:10px !important;
+}
+
+#profilePopup .mb-accstatment .row.ajax-result tr {
+    line-height: 20px;
+}
+
+#profilePopup .mb-accstatment .modal-sub-body #searchform .row:has(.profile-sub-nav) {
+    width: 100%;
+}
+
+#profilePopup .mb-accstatment .modal-sub-body #searchform .form-group .profile-sub-nav {
+    position: relative;
+    top: 0;
+}
+
+#profilePopup .mb-accstatment .profile-sub-nav {
+    margin-bottom: 15px;
+}
+
+#profilePopup .mb-accstatment .profile-sub-nav{
+    margin-top: 15px;
+}
+
+/* Account-statement-update */
+
+#profilePopup .mb-accstatment .row.ajax-result tr img {
+    height: 20px;
+}
+#profilePopup .act-table-link {
+    text-decoration: underline;
+    color: #039BE5 !important;
+}
+ 
+#profilePopup .act-credit {
+    color: #7FFF24 !important;
+}
+ 
+#profilePopup .act-debit {
+    color: #FF5D51 !important;
+}
+ 
+#profilePopup .row.ajax-result .table--scrollable__tr img.game-img {
+    height: 50px;
+}
+ 
+/* body:has(#profilePopup) .Container--full.short-cat{
+    z-index: 1501;
+} */
+
+#loginPopup .modal-header .logo-img{
+    content: url('https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/3d2a4770-c6c2-4ff7-4c71-c077ee158e00/public');
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+}

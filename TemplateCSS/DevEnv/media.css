@@ -254,14 +254,6 @@
         width: calc(100%/4) !important;
     }
 
-    body.mobile #profilePopup .mb-accstatment.history  .profile-sub-nav li{
-        width: 100% !important; 
-    }
-
-    body.mobile #profilePopup .balancehistory .mb-accstatment .profile-sub-nav li {
-        width: 85px !important;
-    }
-
     body.mobile .ajax-result {
         max-height: 100% !important;
     }
@@ -279,9 +271,8 @@
         overflow-x: scroll;
         overflow-y: hidden;
         position: sticky;
-        /* position: -webkit-sticky; */
+        position: -webkit-sticky;
         z-index: 16;
-        top: 40px;
     }
 
     body.mobile .game-category-selector-container {
@@ -366,8 +357,8 @@
 
     body.mobile .wallet-table td,
     .wallet-table th {
-        padding: 5px;
-        text-align: left;
+        padding: 10px;
+        text-align: center;
     }
 
     body.mobile .Wrapper--Single.Header--secondary.open-burger-menu {
@@ -818,14 +809,7 @@
     }
 
     body.mobile #profilePopup .profile-sub-nav li a {
-        padding: 10px 0px;
-    }
-
-    body.mobile #profilePopup .mb-accstatment .profile-sub-nav li a {
-        padding: 10px;
-        font-weight: 500;
-        background-color: #2c2c2c; /*#1a1a1a;*/
-        color: #808080;
+        padding: 18px 10px;
     }
 
     body.mobile #profilePopup .modal-dialog,
@@ -835,17 +819,8 @@
         margin: unset;
     }
 
-    /* 15-change */
-    body.mobile #profilePopup .modal-dialog{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-
     body.mobile #profilePopup .modal-content {
-        height: 84%; /* Changed from 97% */
+        height: 97%;
     }
 
     body.mobile #registrationPopup form.registration.page-2 .js-next-button,
@@ -1481,6 +1456,32 @@
 
 @media screen and (max-width: 768px) {
 
+    
+    .header-balance-button div:first-child {
+    height:43px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 1px solid #D7A528;
+    background: #1D1D1D;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    min-width: 120px;
+    flex-direction: row-reverse;
+    padding: 0 5px 0 0 !important;
+}
+
+    .header-balance-button #menu_balance_wrapper{
+    padding: 0 !important;
+    background: transparent;
+}
+
+    .header-balance-button .Menu--user{
+  display:none;
+  position: absolute;
+  top: 85% !important;
+}
+
     .modal-dialog.search #popupSearchItems {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         height:auto;
@@ -1545,7 +1546,7 @@
     }
 
     #profilePopup .profile-sub-nav li a {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .identifications-settings-wrapper .row.submBtnBlock {
@@ -2648,8 +2649,68 @@ img.accordion-trigger.up {
     text-transform: uppercase;
 }
 
+
 .casino-categories{
     margin-top:5px;
+}
+
+body/*: has(#profilePopup .mb-accstatment)*/ .Container--full.short-cat:has(.header-mobile-update) {
+    z-index: 1501;
+}
+
+body:has(#loginPopup) .mobile-bottom-navbar{
+    z-index: 1079;
+}
+
+.modal-backdrop{
+    z-index: 1080;
+}
+
+.modal-content {
+    top: 50px;
+}
+
+/* Deposit screen fix */
+.trans-logo{
+    display: block !important;
+    width:75px;
+}
+ 
+.trans-proc-time{
+    display: none;
+}
+ 
+.deposit .modal-sub-body-inner > .row:first-child .trans-proc-time{
+    visibility: hidden !important;
+    display:block;
+}
+ 
+.deposit .transaction-row-outlined{
+    width: 100%;
+}
+ 
+.mobile .transaction-row-outlined.column-headers, .mobile .transaction-row-outlined.column-headers-withdrawal{
+    align-items: center;    
+}
+ 
+.transaction-row{
+    padding: 6px 14px;
+}
+ 
+.transaction-row-outlined.column-headers, .transaction-row-outlined.column-headers-withdrawal{
+    padding: 6px 14px;
+}
+ 
+body.mobile #profilePopup .mb-accstatment .profile-sub-nav{
+    gap:5px !important;
+}
+ 
+.deposit .modal-sub-body-inner > .row:first-child .trans-proc-time:after {
+    visibility: visible !important;
+    content: "Options";
+    position: relative;
+    bottom: 9px;
+    right: 10px;
 }
 
 }
@@ -2776,7 +2837,8 @@ img.accordion-trigger.up {
     left: 26rem;
     background: black;
     width: fit-content;
-	flex: 0.84;
+    padding-left: 5px;
+	/* flex: 0.84; */
 }
 
 .header-balance-button div:first-child {
@@ -2877,6 +2939,7 @@ img.accordion-trigger.up {
     display: none;
 }
 
+/* Account-statement-update */
 .mb-accstatment .form-group:has(.btn-filter){
     align-items: center;
     justify-content: center;
@@ -2884,3 +2947,69 @@ img.accordion-trigger.up {
     height: 100%;
 }
 
+body.mobile #profilePopup .mb-accstatment.history  .profile-sub-nav li{
+    width: 100% !important; 
+}
+
+body.mobile #profilePopup .balancehistory .mb-accstatment .profile-sub-nav li {
+    width: 85px !important;
+}
+
+body.mobile #profilePopup .mb-accstatment .profile-sub-nav{
+    top: 40px;
+}
+
+/* body.mobile #profilePopup .mb-accstatment .profile-sub-nav li a {
+    padding: 10px 0px !important;
+} */
+
+body.mobile #profilePopup .mb-accstatment .profile-sub-nav li a {
+    padding: 5px;
+    font-weight: 500;
+    background-color: #2c2c2c; /*#1a1a1a;*/
+    color: #808080;
+}
+
+
+
+body.mobile #profilePopup .mb-accstatment.modal-dialog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+body.mobile #profilePopup .mb-accstatment .modal-content {
+    height: 100%; /* Changed from 97% */
+}
+
+
+#profilePopup .mb-accstatment .profile-sub-nav li a {
+    font-size: 10px;
+}
+
+body.mobile #profilePopup .mb-accstatment .wallet-table td,
+#profilePopup .mb-accstatment .wallet-table th {
+    padding: 5px;
+    text-align: left;
+}
+
+
+@media screen and (max-device-width: 1366px) {
+    body.mobile #profilePopup .mb-accstatment .profile-sub-nav li a{
+        padding: 5px;
+        min-height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:10px;
+    } 
+    body.mobile #profilePopup .profile-sub-nav{
+        gap: 0px !important;
+    }
+
+    body.mobile .mb-accstatment .modal-dialog.balancehistory .drawer-body.open{
+        padding: 10px 0 !important;
+    }
+}
