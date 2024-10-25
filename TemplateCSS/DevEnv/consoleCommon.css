@@ -11420,11 +11420,7 @@ background-color: #1A1A1A !important;
     display: block;
 }
 
-#profilePopup .mb-accstatment .col-xs-4:nth-child(1),
-.col-xs-4:nth-child(2) {
-    background-color: #2c2c2c; /* Light blue background */
-    /* height: 40px; */
-}
+
 
 #profilePopup .mb-accstatment .col-xs-4:nth-child(1){
     border-top-left-radius: 20px;
