@@ -3023,3 +3023,24 @@ body.mobile #profilePopup .mb-accstatment .wallet-table td,
         border: 1px solid var(--background-color-1);
     }
 }
+
+
+@media screen and (max-device-width: 1366px) {
+    body.mobile #profilePopup .profile .profile-sub-nav {
+        top: 60px;
+    }
+}
+
+@media screen and (max-device-width: 1366px) {
+    body.mobile .profile .modal-header .logo-img {
+        width: 190px;
+        margin: 10px auto;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal-dialog.deposit .modal-content button.close,  .modal-dialog.withdrawal .modal-content button.close{
+        top: 75px;
+    }
+}
