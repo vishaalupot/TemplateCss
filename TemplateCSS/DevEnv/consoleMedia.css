@@ -248,11 +248,11 @@
         grid-template-columns: 3fr 3fr 3fr !important;
     }
 
-    body.mobile #profilePopup .history .profile-sub-nav li,
+    /* body.mobile #profilePopup .history .profile-sub-nav li,
     body.mobile #profilePopup .balancehistory .profile-sub-nav li,
     body.mobile #profilePopup .gameshistory .profile-sub-nav li {
         width: calc(100%/4) !important;
-    }
+    } */
 
     body.mobile .ajax-result {
         max-height: 100% !important;
@@ -342,10 +342,10 @@
         width: 100% !important;
     }
 
-    body.mobile #profilePopup .modal-dialog.deposit .profile-sub-nav li,
+    /* body.mobile #profilePopup .modal-dialog.deposit .profile-sub-nav li,
     body.mobile #profilePopup .modal-dialog.withdrawal .profile-sub-nav li {
         width: calc(100% / 2) !important;
-    }
+    } */
 
     body.mobile .message-details .col-md-5 {
         width: unset;
@@ -748,11 +748,11 @@
         overflow-y: hidden;
     }
 
-    body.mobile .modal-dialog.gameshistory .profile-sub-nav li,
+    /* body.mobile .modal-dialog.gameshistory .profile-sub-nav li,
     body.mobile .modal-dialog.balancehistory .profile-sub-nav li,
     body.mobile .modal-dialog.history .profile-sub-nav li {
         width: calc(100% / 3 - 4px) !important;
-    }
+    } */
 
     body.mobile .modal-sub-body-inner {
         position: relative;
