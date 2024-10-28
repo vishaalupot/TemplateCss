@@ -222,6 +222,10 @@
     body.mobile #profilePopup .profile-sub-nav {
         top: 130px;
     }
+	
+	body.mobile #profilePopup .withdrawal .profile-sub-nav, body.mobile #profilePopup .deposit .profile-sub-nav{
+	   top:117px;
+	}
 
     body.mobile .freespin-games.expired {
         position: relative;

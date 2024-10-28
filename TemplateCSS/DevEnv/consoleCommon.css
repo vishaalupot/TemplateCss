@@ -11602,7 +11602,7 @@ p.register-text{
 }
 
 .mobile #profilePopup .withdrawal .modal-header, .mobile #profilePopup .deposit .modal-header {
-    padding-bottom:10px;
+   /* padding-bottom:20px; */
     margin-bottom: 0px !important;
 }
 
