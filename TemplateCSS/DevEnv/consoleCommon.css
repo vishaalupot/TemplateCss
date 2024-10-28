@@ -6836,6 +6836,7 @@ font-size: 25px;
 height: calc(100% - 245px) !important;
 padding: 0 10px !important;
 position: relative;
+margin: 0px 0px 100px 0px;
 }
 
 #profilePopup .personal-details,#profilePopup .identifications {
@@ -11564,7 +11565,7 @@ background-color: #1A1A1A !important;
        gap: 6px;
        justify-content:center;
        align-items: center;
-       padding-bottom: 100px;
+       /* padding-bottom: 100px; */
    }
    
    #registrationPopup .row .send-code-button #regNextBtn {
@@ -11588,4 +11589,18 @@ p.register-text{
 
 #divLoginWithUsername{
     height: 60vh;
+}
+
+.mobile #registrationPopup .modal-body {
+   overflow-x: auto;
+   height: calc(100vh - 340px);
+}
+
+#loginPopup a#loginwithMb {
+    color: white;
+    font-weight: 500;
+}
+
+.mobile #profilePopup .modal-header {
+    padding-bottom:20px;
 }
