@@ -2739,6 +2739,7 @@ overflow-x: hidden;
 border: 1px solid var(--primary-color-80);
 background: var(--header-color-2);
 border-radius: 12px;
+padding-bottom: 50px;
 }
 
 [id^='transaction-details'] label {
@@ -6702,7 +6703,7 @@ background-repeat: no-repeat;
 width: 62%;
 }
 
-.modal-title-text {color: var(--white-color);/* border-bottom: 1px solid var(--primary-color); */min-height: 48px;line-height: 48px;text-transform: uppercase;font-size: 14px;font-weight: 700;display: flex;padding-left: 10px;}
+.modal-title-text {color: var(--white-color);/* border-bottom: 1px solid var(--primary-color); */min-height: 48px;line-height: 48px;/*text-transform: uppercase;*/font-size: 16px;font-weight: 500;display: flex;padding-left: 10px;}
 
 .modal-title-text:not(.mobile .modal-title-text){
     padding-left: 15px;
@@ -11549,4 +11550,42 @@ background-color: #1A1A1A !important;
 
 #loginPopup .modal-dialog .modal-body, #forgotPasswordPopup .modal-dialog .modal-body, #changePasswordPopup .modal-dialog .modal-body{
     padding: 0px 40px 30px 40px;
+}
+
+#registrationPopup .row:has(.send-code-button) p:has(a[href="/terms-conditions"]) {
+    font-size: 10px;
+   }
+   
+   
+   
+   #registrationPopup .row:has(.send-code-button) {
+       display: flex;
+       flex-direction: column;
+       gap: 6px;
+       justify-content:center;
+       align-items: center;
+       padding-bottom: 100px;
+   }
+   
+   #registrationPopup .row .send-code-button #regNextBtn {
+       width: 200px !important;
+       height: 36px !important;
+       justify-content: center;
+   }
+
+   #registrationPopup .row div:has(#regNextBtn) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {color: var(--blue-color-1);text-decoration: none;}
+
+p.register-text{
+    text-align: center;
+}
+
+#divLoginWithUsername{
+    height: 60vh;
 }
