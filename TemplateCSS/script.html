@@ -28,3 +28,61 @@
 </script>
 
 
+<script>
+  /* menu-active-icon */
+  $(document).ready(function(){
+ 
+    $(document.body).on('click', 'a[href="#register"]:not(.Button--sign-up)', function() {
+        let params = {
+            callback: () => {
+                if ($(this).attr('newtab') == "true") {
+                    window.location.reload();
+                    window.open($(this).data('href'));
+                } else {
+                    window.location.href = $(this).data('href') || '';
+                }
+            }
+        }
+        registerPopupWithClose(params);      
+    });
+
+    $(document.body).on('click', 'a[href="#register"]', function() {       
+        setTimeout(() => {
+          $('#registrationPopup .modal-title-text').text('Register now to play');
+          $('#registerContainer #regNextBtn').text('Send Code');
+          $("#registerContainer .row:has('#regNextBtn') div").removeClass('text-right').addClass('send-code-button')
+          $("#registerContainer .row:has('#regNextBtn') div").removeClass('text-right').addClass('send-code-button').after('<p class="register-text">By clicking on "send code", you accepting <a href="/terms-conditions">terms and conditions</a></p><p class="register-text">Have an account? <a href="#login" popup-with-href="" aria-label="Login">Log in</a></p>')
+        }, 1000);
+      
+    });
+
+    $(document.body).on('click', 'a[href="#login"]', function() {
+      setTimeout(() => {
+        $('.registration #popupLoginBtn').text('Login Now');
+        $('#loginPopup .modal-title-text').text('Login now to play');
+        $('#divLoginWithUsername form .row').first().hide();
+        $('#divLoginWithUsername form .row').last().after('<p class="register-text">Don’t have an account? <a style="color: var(--primary-color);font-weight: 600;text-align: center;" href="#register">Register</a></p>')
+        }, 1000);
+    })
+
+    var menu = {'':0, 'home':0, 'casino':1, 'sport-exchange': 2, 'bonus': 3, 'menu': 4};
+    var currentURL = $(location).attr('href').split('/').pop();
+    $('.mobile-bottom-navbar .Item svg').each(function(index, element){
+      if(menu[currentURL] === index){
+          $(element).parentsUntil('.mobile-navbar-items-wrapper').addClass('active')
+      }else{
+          // element.removeClass('active');
+          $(element).parentsUntil('.mobile-navbar-items-wrapper').removeClass('active')
+      }
+    })
+    /* Auth Guard Script */
+      if(parseInt(BalanceUpdater.PlayerId) === 0){
+        $('.auth-guard a:first-child').each(function(index, element){
+          let url = $(element).attr("href");
+          $(element).attr("href", "#login").attr("data-href", url)
+        })       
+      }
+    /* Auth Guard Script */
+  })
+  /* menu-active-icon */
+</script>
