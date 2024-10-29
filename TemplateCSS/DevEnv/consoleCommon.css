@@ -6661,7 +6661,7 @@ margin-top: -35px;
 
 .modal-content {
     box-shadow: none;
-    border: 1px solid var(--primary-color)  /*var(--primary-color)*/;background-color: #000000;overflow: hidden;font-size: 1.3rem;color: var(--white-color);height: auto;user-select: none;border-radius: 20px;}
+    border: 1px solid var(--primary-color)  /*var(--primary-color)*/;background-color: #000000;overflow: hidden;font-size: 1.3rem;color: var(--white-color);height: auto;user-select: none;border-radius: 12px;}
 
 
 .mobile .modal-content {/* height: 70%; *//* margin: 10px; */}
@@ -11608,4 +11608,50 @@ p.register-text{
 
 #profilePopup li{
     flex: auto;
+}
+
+/* #transactionDetailPopup .modal-dialog.mb-accstatment {
+    margin: 0px !important;
+} */
+
+.col-xs-12 .col-xs-6:first-child .no-wrap.table--scrollable__th {
+    justify-content: left;
+}
+
+.col-xs-12 .col-xs-6:last-child .no-wrap.table--scrollable__th {
+    justify-content: right;
+}
+
+.modal--balance-history.mb-accstatment .modal-content{
+    border: 1px solid gray !important;
+    top: 80px
+}
+
+/* .modal-open .modal#profilePopup{
+    z-index: 1498;
+} */
+
+.modal-open:has(.modal#transactionDetailPopup) .modal#profilePopup {
+    z-index: 1498;
+}
+
+.modal-open:has(.modal#transactionDetailPopup) .modal#transactionDetailPopup + .modal-backdrop{
+    z-index: 1499;
+}
+
+
+#transactionDetailPopup .mb-accstatment .modal-title-text{
+    border-bottom: 1px solid gray !important;
+}
+
+#transactionDetailPopup .mb-accstatment .modal-header{
+    margin-bottom: 0px !important;
+}
+#transactionDetailPopup .mb-accstatment .col-xs-12:not(:last-child) {
+    border-bottom: 1px solid gray;
+}
+
+#transactionDetailPopup .mb-accstatment .modal-body{
+    padding: 0px !important;
+
 }
