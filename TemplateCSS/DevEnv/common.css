@@ -11427,11 +11427,13 @@ background-color: #1A1A1A !important;
 #profilePopup .mb-accstatment .col-xs-4:nth-child(1){
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    height: 30px !important;
 }
 
 #profilePopup .mb-accstatment .col-xs-4:nth-child(2){
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    height: 30px !important;
 }
 
 #profilePopup .mb-accstatment .col-xs-4:has(.form-group #SearchEndDate):after {
@@ -11594,6 +11596,7 @@ p.register-text{
 .mobile #registrationPopup .modal-body {
    overflow-x: auto;
    height: calc(100vh - 340px);
+   overflow-x: hidden;
 }
 
 #loginPopup a#loginwithMb {

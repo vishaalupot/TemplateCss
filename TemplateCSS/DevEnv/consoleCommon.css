@@ -11427,17 +11427,19 @@ background-color: #1A1A1A !important;
 #profilePopup .mb-accstatment .col-xs-4:nth-child(1){
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    height: 30px !important;
 }
 
 #profilePopup .mb-accstatment .col-xs-4:nth-child(2){
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    height: 30px !important;
 }
 
 #profilePopup .mb-accstatment .col-xs-4:has(.form-group #SearchEndDate):after {
     content: "-";
     position: absolute;
-    top: 10px;
+    top: 7px;
     right: 96%;
     color: #808080 !important;
     font-weight: 500;
