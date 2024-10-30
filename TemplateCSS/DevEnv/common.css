@@ -11581,7 +11581,7 @@ background-color: #1A1A1A !important;
     align-items: center;
 }
 
-a {/* color: var(--blue-color-1); */text-decoration: none;}
+a {color: var(--blue-color-1);text-decoration: none;}
 
 p.register-text{
     text-align: center;

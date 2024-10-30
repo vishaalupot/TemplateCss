@@ -11581,7 +11581,6 @@ background-color: #1A1A1A !important;
     align-items: center;
 }
 
-a {color: var(--blue-color-1);text-decoration: none;}
 
 p.register-text{
     text-align: center;
@@ -11592,7 +11591,7 @@ p.register-text{
 }
 
 .mobile #registrationPopup .modal-body {
-   overflow-x: auto;
+   overflow-y: auto;
    height: calc(100vh - 340px);
 }
 
@@ -11655,6 +11654,12 @@ p.register-text{
     padding: 0px !important;
 
 }
+
+#registerContainer a {
+    color: var(--blue-color-1);
+    text-decoration: none;
+}
+
 
 
 /* Animated GIF Banner UPDATE */
