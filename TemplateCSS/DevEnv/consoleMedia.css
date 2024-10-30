@@ -1688,7 +1688,8 @@
     }
 
     body.mobile form.registration.page-1 .row .col-xs-6 {
-        width: 52% !important;
+		width: 62% !important;
+       /*width: 52% !important;*/
     }
 
     .modal-dialog.search #popupSearchItems {
@@ -3066,6 +3067,13 @@ body.mobile #profilePopup .mb-accstatment .wallet-table td,
     }
 
    /* Animated GIF Banner UPDATE */
+   
+     body:has(.landing-reg) #registrationPopup .modal-content{
+	  top: 0px;
+	  height: 100vh;
+	  border-radius: 0px;
+	  
+  }
 }
 
 #loginPopup .modal-content, #registrationPopup .modal-content{
@@ -3080,3 +3088,25 @@ body.mobile #profilePopup .mb-accstatment .wallet-table td,
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
   }
+  
+  /* Landing page - marketing */
+  body:has(.landing-reg) .Container--full.short-cat:has(.header-mobile-update) {
+    z-index: 1;
+  } 
+
+  
+
+   body:has(.landing-reg) #registrationPopup .modal-content .close{
+	   display:none;
+  }  
+  
+   body:has(.landing-reg) .mobile-bottom-navbar{
+	  display:none;
+  }
+  
+  body:has(.landing-reg) .modal-backdrop{
+	  opacity:1;
+  }
+  
+
+/* Landing page - marketing */

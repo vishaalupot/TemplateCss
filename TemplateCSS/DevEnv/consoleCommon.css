@@ -11774,3 +11774,27 @@ p.register-text{
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
   }
+  
+  /* Landing page - marketing */
+  body:has(.landing-reg) .header-desktop {
+    z-index: 1;
+  }
+  
+    body:has(.landing-reg) .modal-backdrop{
+	  opacity:1;
+  }
+    
+  body:has(.landing-reg) #registrationPopup .modal-content{
+	  top: 0px;
+	  height: 90vh;
+	  border: 1px solid var(--grey-color) !important;
+	  border-radius: 15px;
+  }
+   body:has(.landing-reg) #registrationPopup .modal-content .close{
+	   display:none;
+  }  
+/* Landing page - marketing */
+
+#registrationPopup .modal-body {
+    padding: 0px 40px 30px 40px;
+}
