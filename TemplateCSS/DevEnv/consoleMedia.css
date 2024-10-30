@@ -3057,6 +3057,15 @@ body.mobile #profilePopup .mb-accstatment .wallet-table td,
     .modal-dialog.deposit .modal-content button.close,  .modal-dialog.withdrawal .modal-content button.close{
         top: 75px;
     }
+
+   /* Animated GIF Banner UPDATE */
+   .first_content .Item img {
+    border: 0;
+    border-radius: 10.01px;
+    max-width: 55px;
+    }
+
+   /* Animated GIF Banner UPDATE */
 }
 
 #loginPopup .modal-content, #registrationPopup .modal-content{
