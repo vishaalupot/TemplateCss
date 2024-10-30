@@ -10,6 +10,7 @@ src: url('../fonts/brand-fonts/brand-icon-font_v22.ttf') format('embedded-openty
 font-display: swap;
 }
 
+
 :root {
 --primary-color:rgb(251, 210, 69);
 --primary-color-2:rgb(215, 165, 40);
@@ -2738,6 +2739,7 @@ overflow-x: hidden;
 border: 1px solid var(--primary-color-80);
 background: var(--header-color-2);
 border-radius: 12px;
+padding-bottom: 50px;
 }
 
 [id^='transaction-details'] label {
@@ -3456,9 +3458,7 @@ border-bottom: 1px solid !important;
 
 #loginPopup .modal-dialog .modal-body,
 #forgotPasswordPopup .modal-dialog .modal-body,
-#changePasswordPopup .modal-dialog .modal-body {
-padding: 40px;
-}
+#changePasswordPopup .modal-dialog .modal-body {padding: 40px;}
 
 .responsible-gambling .select,
 .select2-selection.select2-selection--single,
@@ -6660,21 +6660,11 @@ margin-top: -35px;
 }
 
 .modal-content {
-box-shadow: none;
-border: 1px solid var(--background-color-1) /*var(--primary-color)*/;
-background-color: #000000;
-overflow: hidden;
-font-size: 1.3rem;
-color: var(--white-color);
-height: auto;
-user-select: none;
-border-radius: 20px;
-}
+    box-shadow: none;
+    border: 1px solid var(--primary-color)  /*var(--primary-color)*/;background-color: #000000;overflow: hidden;font-size: 1.3rem;color: var(--white-color);height: auto;user-select: none;border-radius: 20px;}
 
-.mobile .modal-content {
-/* height: 70%; */
-margin: 10px;
-}
+
+.mobile .modal-content {/* height: 70%; *//* margin: 10px; */}
 
 #messageModal .modal-content {
 border: none !important;
@@ -6690,12 +6680,7 @@ width: 190px;
 margin: 36px auto;
 }
 
-.modal-header {
-display: flex;
-flex-direction: column-reverse;
-padding: unset;
-border: 0!important;
-}
+.modal-header {display: flex;flex-direction: column;padding: unset;border: 0!important;}
 
 .mobile .modal-header {
     margin-bottom:20px;
@@ -6718,17 +6703,7 @@ background-repeat: no-repeat;
 width: 62%;
 }
 
-.modal-title-text {
-color: var(--white-color);
-border-bottom: 1px solid var(--primary-color);
-min-height: 48px;
-line-height: 48px;
-text-transform: uppercase;
-font-size: 14px;
-font-weight: 700;
-display: flex;
-padding-left: 10px;
-}
+.modal-title-text {color: var(--white-color);/* border-bottom: 1px solid var(--primary-color); */min-height: 48px;line-height: 48px;/*text-transform: uppercase;*/font-size: 16px;font-weight: 500;display: flex;padding-left: 10px;}
 
 .modal-title-text:not(.mobile .modal-title-text){
     padding-left: 15px;
@@ -6861,6 +6836,7 @@ font-size: 25px;
 height: calc(100% - 245px) !important;
 padding: 0 10px !important;
 position: relative;
+margin: 0px 0px 100px 0px;
 }
 
 #profilePopup .personal-details,#profilePopup .identifications {
@@ -11446,11 +11422,7 @@ background-color: #1A1A1A !important;
     display: block;
 }
 
-#profilePopup .mb-accstatment .col-xs-4:nth-child(1),
-.col-xs-4:nth-child(2) {
-    background-color: #2c2c2c; /* Light blue background */
-    /* height: 40px; */
-}
+
 
 #profilePopup .mb-accstatment .col-xs-4:nth-child(1){
     border-top-left-radius: 20px;
@@ -11561,4 +11533,79 @@ background-color: #1A1A1A !important;
     width: 100%;
     margin: 0;
     margin-bottom: 10px;
+}
+
+#registrationPopup .modal-header .logo-img{
+    content: url('https://imagedelivery.net/u45V04IDk2961F7ANAiDUw/3d2a4770-c6c2-4ff7-4c71-c077ee158e00/public');
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+
+#loginPopup .modal-header .modal-title-text, #registrationPopup .modal-header .modal-title-text {
+    color: var(--text-color);
+    border-bottom: none;
+    justify-content: center;
+}
+
+#loginPopup .modal-dialog .modal-body, #forgotPasswordPopup .modal-dialog .modal-body, #changePasswordPopup .modal-dialog .modal-body{
+    padding: 0px 40px 30px 40px;
+}
+
+#registrationPopup .row:has(.send-code-button) p:has(a[href="/terms-conditions"]) {
+    font-size: 10px;
+   }
+   
+   
+   
+   #registrationPopup .row:has(.send-code-button) {
+       display: flex;
+       flex-direction: column;
+       gap: 6px;
+       justify-content:center;
+       align-items: center;
+       /* padding-bottom: 100px; */
+   }
+   
+   #registrationPopup .row .send-code-button #regNextBtn {
+       width: 200px !important;
+       height: 36px !important;
+       justify-content: center;
+   }
+
+   #registrationPopup .row div:has(#regNextBtn) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {/* color: var(--blue-color-1); */text-decoration: none;}
+
+p.register-text{
+    text-align: center;
+}
+
+#divLoginWithUsername{
+    height: 60vh;
+}
+
+.mobile #registrationPopup .modal-body {
+   overflow-x: auto;
+   height: calc(100vh - 340px);
+}
+
+#loginPopup a#loginwithMb {
+    color: white;
+    font-weight: 500;
+}
+
+.mobile #profilePopup .withdrawal .modal-header, .mobile #profilePopup .deposit .modal-header {
+   /* padding-bottom:20px; */
+    margin-bottom: 0px !important;
+}
+
+#profilePopup li{
+    flex: auto;
 }
