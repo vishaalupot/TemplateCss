@@ -2603,6 +2603,7 @@ display: flex;
 text-align: start;
 justify-self: flex-start;
 font-size: 12px;
+width: 100%;
 }
 
 .mobile .transaction-row-outlined.column-headers, .mobile .transaction-row-outlined.column-headers-withdrawal {
@@ -11800,3 +11801,8 @@ p.register-text{
 #registrationPopup .modal-body {
     padding: 0px 40px 30px 40px;
 }
+
+body:has(.game-launch--full) .header-balance-button {
+    display: none;
+}
+
