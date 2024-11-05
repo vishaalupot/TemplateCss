@@ -11802,7 +11802,6 @@ p.register-text{
     padding: 0px 40px 30px 40px;
 }
 
-body:has(.game-launch--full) .header-balance-button {
+body:has(.game-launch--full, .Container--GamePage) .header-balance-button {
     display: none;
 }
-
