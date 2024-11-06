@@ -222,6 +222,10 @@
     body.mobile #profilePopup .profile-sub-nav {
         top: 130px;
     }
+	
+	body.mobile #profilePopup .withdrawal .profile-sub-nav, body.mobile #profilePopup .deposit .profile-sub-nav{
+	   top:117px;
+	}
 
     body.mobile .freespin-games.expired {
         position: relative;
@@ -248,11 +252,11 @@
         grid-template-columns: 3fr 3fr 3fr !important;
     }
 
-    body.mobile #profilePopup .history .profile-sub-nav li,
+    /* body.mobile #profilePopup .history .profile-sub-nav li,
     body.mobile #profilePopup .balancehistory .profile-sub-nav li,
     body.mobile #profilePopup .gameshistory .profile-sub-nav li {
         width: calc(100%/4) !important;
-    }
+    } */
 
     body.mobile .ajax-result {
         max-height: 100% !important;
@@ -298,7 +302,8 @@
     body.mobile .Wrapper--LargeDouble .slick-list.draggable,
     body.mobile .Wrapper--LargeDouble .slick-track,
     body.mobile .Wrapper--LargeDouble img.card-image {
-        height: auto;
+        /* height: auto; */
+        height: 160px;
     }
 
     body.mobile .Wrapper--LargeDouble .front a {
@@ -342,10 +347,10 @@
         width: 100% !important;
     }
 
-    body.mobile #profilePopup .modal-dialog.deposit .profile-sub-nav li,
+    /* body.mobile #profilePopup .modal-dialog.deposit .profile-sub-nav li,
     body.mobile #profilePopup .modal-dialog.withdrawal .profile-sub-nav li {
         width: calc(100% / 2) !important;
-    }
+    } */
 
     body.mobile .message-details .col-md-5 {
         width: unset;
@@ -748,11 +753,11 @@
         overflow-y: hidden;
     }
 
-    body.mobile .modal-dialog.gameshistory .profile-sub-nav li,
+    /* body.mobile .modal-dialog.gameshistory .profile-sub-nav li,
     body.mobile .modal-dialog.balancehistory .profile-sub-nav li,
     body.mobile .modal-dialog.history .profile-sub-nav li {
         width: calc(100% / 3 - 4px) !important;
-    }
+    } */
 
     body.mobile .modal-sub-body-inner {
         position: relative;
@@ -882,7 +887,7 @@
         /* height: 55%; */
         overflow-x: hidden;
         overflow-y: auto;
-        margin: 10px;
+        /* margin: 10px; */
     }
 
     body.mobile .Confirm--policy .button-group {
@@ -1460,7 +1465,7 @@
     .header-balance-button div:first-child {
     height:43px;
     flex-shrink: 0;
-    border-radius: 40px;
+    border-radius: 8px;
     border: 1px solid #D7A528;
     background: #1D1D1D;
     display:flex;
@@ -1684,7 +1689,8 @@
     }
 
     body.mobile form.registration.page-1 .row .col-xs-6 {
-        width: 52% !important;
+		width: 62% !important;
+       /*width: 52% !important;*/
     }
 
     .modal-dialog.search #popupSearchItems {
@@ -1974,7 +1980,7 @@
 .mobile-bottom-navbar {
     position: fixed;
     bottom: 0;
-    background-color: #111111;
+    background-color: var(--card-darknest-gray);
     width: 100%;
     display: flex;
     height: 64px;
@@ -2107,7 +2113,7 @@
     width: 100% !important;
     height: 175px;
     border: none;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     /* margin-right: 14px; */
     border-color: #000000a8;
@@ -2121,7 +2127,7 @@
 }
 
 .tips-and-tricks-section .slick-dots li.slick-active button:before {
-    color: white
+    color: var(--primary-color);
 }
 
 .tips-and-tricks-section .slick-dots .slick-active {
@@ -2236,9 +2242,14 @@ button.btn.btn-load-more.btn-refer-now {
 }
 
 
-.static-info-page .action-button-section{
+.static-info-page .article-section .action-button-section{
     display: flex;
     justify-content: center;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        var(--card-darknest-gray) 100%
+      );
 }
 
 .static-info-page ul {
@@ -2362,7 +2373,7 @@ button.chat-channel-btn.action-btn.btn.btn-load-more {
 .bonus-list-section .back {
     position: relative;
     bottom: 49px;
-    background: linear-gradient(0deg, black, transparent);
+    background: linear-gradient(0deg, var(--card-darknest-gray), transparent);
 }
 
 .bonus-list-section-wrapper {
@@ -2422,7 +2433,7 @@ button.chat-channel-btn.action-btn.btn.btn-load-more {
 }
 
 .about-us .container {
-    background: #1A1A1A;
+    background: var(--background-color-1);
     border-radius: 12px;
     padding: 12px 17px;
 }
@@ -2439,7 +2450,7 @@ button.chat-channel-btn.action-btn.btn.btn-load-more {
 }
 
 dd.accordion-content {
-    background: #1A1A1A;
+    background: var(--background-color-1);
     padding: 30px 18px;
     position: relative;
     text-align: justify;
@@ -2449,7 +2460,7 @@ dd.accordion-content {
 }
 
 dt.accordion-header {
-    background: #1A1A1A;
+    background: var(--background-color-1);
     padding: 14px 20px;
     border-radius: 40px;
     margin-bottom:1.2rem;
@@ -2586,13 +2597,13 @@ img.accordion-trigger.up {
 }
 
 .header-mobile-update a.Button--outlined--transparent.Button--sign-in {
-    border-radius: 40px;
+    border-radius: 8px;
     text-transform: capitalize;
 }
 
 .header-mobile-update a.Button--outlined.Button--sign-up {
     width: 80px;
-    border-radius: 40px !important;
+    border-radius: 8px !important;
     text-transform: capitalize;
 }
 
@@ -2654,12 +2665,12 @@ img.accordion-trigger.up {
     margin-top:5px;
 }
 
-body:has(#profilePopup .mb-accstatment) .Container--full.short-cat:has(.header-mobile-update) {
+body/*: has(#profilePopup .mb-accstatment)*/ .Container--full.short-cat:has(.header-mobile-update) {
     z-index: 1501;
 }
 
 body:has(#loginPopup) .mobile-bottom-navbar{
-    z-index: 1079;
+    z-index: 1501;
 }
 
 .modal-backdrop{
@@ -2688,6 +2699,10 @@ body:has(#loginPopup) .mobile-bottom-navbar{
 .deposit .transaction-row-outlined{
     width: 100%;
 }
+
+.withdrawal .transaction-row-outlined{
+    width: 100%;
+}  
  
 .mobile .transaction-row-outlined.column-headers, .mobile .transaction-row-outlined.column-headers-withdrawal{
     align-items: center;    
@@ -2711,6 +2726,14 @@ body.mobile #profilePopup .mb-accstatment .profile-sub-nav{
     position: relative;
     bottom: 9px;
     right: 10px;
+}
+
+.Widget--banner--multi.animated.image .Item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    height: 60px;
 }
 
 }
@@ -2844,7 +2867,7 @@ body.mobile #profilePopup .mb-accstatment .profile-sub-nav{
 .header-balance-button div:first-child {
     height:43px;
     flex-shrink: 0;
-    border-radius: 40px;
+    border-radius: 8px;
     border: 1px solid #D7A528;
     background: #1D1D1D;
     display:flex;
@@ -2856,7 +2879,7 @@ body.mobile #profilePopup .mb-accstatment .profile-sub-nav{
 }
 
 .header-balance-button div.active {
-    border-radius: 25px 25px 0 0;
+    border-radius: 8px 8px 0 0;
     border-bottom: none;
 }
 
@@ -2868,7 +2891,7 @@ body.mobile #profilePopup .mb-accstatment .profile-sub-nav{
 .header-balance-button .balance-total  #totalBonus{
     display: flex;
     justify-content: left;
-    border-radius: 0 0 25px 25px !important;
+    border-radius: 0 0 8px 8px !important;
     background: #1D1D1D;
     height: 45px;
     min-width: 120px;
@@ -3013,3 +3036,124 @@ body.mobile #profilePopup .mb-accstatment .wallet-table td,
         padding: 10px 0 !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    #profilePopup .deposit .modal-content, #profilePopup .withdrawal .modal-content {
+        top: -5px;
+    }
+
+    .modal-content{
+        border: 1px solid var(--background-color-1);
+    }
+}
+
+
+@media screen and (max-device-width: 1366px) {
+    body.mobile #profilePopup .profile .profile-sub-nav {
+        top: 60px;
+    }
+}
+
+@media screen and (max-device-width: 1366px) {
+    body.mobile .profile .modal-header .logo-img {
+        width: 190px;
+        margin: 10px auto;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #profilePopup .mb-accstatment .col-xs-4:nth-child(1),
+    .col-xs-4:nth-child(2) {
+        background-color: #2c2c2c; /* Light blue background */
+        /* height: 40px; */
+    }
+    .modal-dialog.deposit .modal-content button.close,  .modal-dialog.withdrawal .modal-content button.close{
+        top: 75px;
+    }
+
+   /* Animated GIF Banner UPDATE */
+   .first_content .Item img {
+    border: 0;
+    border-radius: 10.01px;
+    max-width: 55px;
+    }
+
+   /* Animated GIF Banner UPDATE */
+   
+     body:has(.landing-reg) #registrationPopup .modal-content{
+	  top: 0px;
+	  height: 100vh;
+	  border-radius: 0px;
+	  
+  }
+
+    /* mobile game cat arrow */
+    .casino-categories .slick-next,
+    .activity-feed .slick-next {
+      position: absolute;
+      top: 12px;
+      margin-right: 12px;
+    }
+    .casino-categories .slick-prev,
+    .activity-feed .slick-prev {
+      margin-right: 6px;
+      position: inherit;
+      float: right;
+      left: -20px;
+      top: 12px;
+      margin-right: 30px;
+    }
+  
+    .casino-categories .slick-prev,
+    .casino-categories .slick-next,
+    .activity-feed .slick-prev,
+    .activity-feed .slick-next {
+      opacity: inherit;
+      margin-top: -29px;
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      color: var(--white-color);
+      border: 1px solid #000000ad;
+      box-shadow: none;
+      border-radius: 5px;
+    }
+    /* mobile game cat arrow */
+}
+
+#loginPopup .modal-content, #registrationPopup .modal-content{
+    top: 56px;
+    /* top: 6vh; */
+    margin: 0px;
+    border: none !important;
+    height:100%;
+    border-radius: 0;
+    height: calc(100vh - 56px);
+    overflow:auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Landing page - marketing */
+  body:has(.landing-reg) .Container--full.short-cat:has(.header-mobile-update) {
+    z-index: 1;
+  } 
+
+  
+
+   body:has(.landing-reg) #registrationPopup .modal-content .close{
+	   display:none;
+  }  
+  
+   body:has(.landing-reg) .mobile-bottom-navbar{
+	  display:none;
+  }
+  
+  body:has(.landing-reg) .modal-backdrop{
+	  opacity:1;
+  }
+  
+
+/* Landing page - marketing */
